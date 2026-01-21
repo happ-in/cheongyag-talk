@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: cheongyagtalk
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/talk_db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  batch:
+    jdbc:
+      initialize-schema: always
