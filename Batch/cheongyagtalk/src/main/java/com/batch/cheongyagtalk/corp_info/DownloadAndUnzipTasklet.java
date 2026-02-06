@@ -38,7 +38,7 @@ public class DownloadAndUnzipTasklet implements Tasklet {
 
         String url = "https://opendart.fss.or.kr/api/corpCode.xml?crtfc_key=5fcd3663cd9fceab25ea2365cf594fa0b30b1510";
 
-        Path workDir = Paths.get("~/cheongyagtalk/batch/corpcode");
+        Path workDir = Paths.get("/corpcode");
         Files.createDirectories(workDir);
 
         Path zipPath = workDir.resolve("corpcode.zip");
