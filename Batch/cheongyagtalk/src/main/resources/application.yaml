@@ -1,13 +1,13 @@
 spring:
-  application:
-    name: cheongyagtalk
-
   datasource:
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/talk_db
     username: root
     password: root
-    driver-class-name: org.postgresql.Driver
 
   batch:
     jdbc:
-      initialize-schema: always
+      initialize-schema: never # always 개발용. 운영은 스키마수동 관리 권장
+
+server:
+  port: 8081
