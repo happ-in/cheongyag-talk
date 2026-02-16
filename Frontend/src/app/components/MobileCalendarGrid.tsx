@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, isToday } from "date-fns";
 import { ko } from "date-fns/locale";
+import { useEffect } from "react";
 
 interface CalendarEvent {
   id: string;
@@ -18,6 +19,11 @@ interface MobileCalendarGridProps {
 }
 
 export function MobileCalendarGrid({ currentDate, events, selectedDate, onDateSelect, onMonthChange }: MobileCalendarGridProps) {
+  useEffect(() => {
+    console.log(format(monthStart, 'yyyyMMdd'))
+    console.log(format(monthEnd, 'yyyyMMdd'));
+  })
+  
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
   
