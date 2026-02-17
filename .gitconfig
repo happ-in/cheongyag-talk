@@ -1,11 +1,2 @@
 git config --global commit.template ~/.gitmessag
 
-*/node_modules
-
-.env
-.env.test
-.env.production
-
-.cache
-
-*/dist
